@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/31527888/README.md)
+
 # MINDSPACE
 
 MINDSPACE é uma plataforma web para conectar pacientes, profissionais de saúde e voluntários, permitindo agendar, visualizar e cancelar consultas de forma simples.
