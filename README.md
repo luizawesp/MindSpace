@@ -39,6 +39,3 @@ Cada pasta contém os arquivos HTML, CSS e imagens referentes àquela seção do
 2. Abra o arquivo `index.html` da seção desejada (por exemplo, `landingpage/index.html`) diretamente no navegador.
 3. Para uma experiência mais próxima do ambiente real, recomenda-se usar uma extensão como o **Live Server** do VS Code.
 
-## Autoria
-
-Projeto desenvolvido por Luiza.
