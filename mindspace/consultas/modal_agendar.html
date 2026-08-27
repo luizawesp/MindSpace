@@ -1,0 +1,211 @@
+<link rel="stylesheet" href="css/modal_agendar.css">
+
+<input type="checkbox" id="fechar_modal" class="gatilho_oculto">
+<title>Agendar Consulta</title>
+<center><div class="modal__agendar">
+    
+    <input type="radio" id="mostrar_medicos" class="gatilho_oculto">
+    <input type="radio" name="data_escolhida" id="dia_1" value="01/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_2" value="02/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_3" value="03/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_4" value="04/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_5" value="05/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_6" value="06/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_8" value="08/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_9" value="09/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_10" value="10/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_11" value="11/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_13" value="13/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_14" value="14/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_16" value="16/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_17" value="17/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_18" value="18/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_19" value="19/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_20" value="20/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_22" value="22/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_24" value="24/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_25" value="25/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_26" value="26/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_27" value="27/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_28" value="28/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_29" value="29/06/2026" class="gatilho_oculto gatilho_dia">
+    <input type="radio" name="data_escolhida" id="dia_30" value="30/06/2026" class="gatilho_oculto gatilho_dia">
+    
+    <div class="modal_interno">
+        
+        <div class="coluna_esquerda">
+            <div class="modal_conteudo">
+                <h2>Agendar Consulta</h2>
+                <p>Selecione uma data para ver os horários disponíveis.</p>
+                <h3 class="mes_destaque">Junho De 2026</h3>
+            </div>
+
+            <table class="calendario_tabela">
+                <thead>
+                    <tr class="calendario_linha_semana">
+                        <th class="dia_semana">D</th>
+                        <th class="dia_semana">S</th>
+                        <th class="dia_semana">T</th>
+                        <th class="dia_semana">Q</th>
+                        <th class="dia_semana">Q</th>
+                        <th class="dia_semana">S</th>
+                        <th class="dia_semana">S</th>
+                    </tr>
+                </thead>
+                <tbody class="calendario_corpo">
+                    <tr>
+                        <td></td>
+                        <td><label for="dia_1" class="dia_data">1</label></td>
+                        <td><label for="dia_2" class="dia_data">2</label></td>
+                        <td><button class="dia_data" disabled>3</button></td>
+                        <td><label for="dia_4" class="dia_data">4</label></td>
+                        <td><label for="dia_5" class="dia_data">5</label></td>
+                        <td><label for="dia_6" class="dia_data">6</label></td>
+                    </tr>
+                    <tr>
+                        <td><button class="dia_data" disabled>7</button></td>
+                        <td><label for="dia_8" class="dia_data">8</label></td>
+                        <td><label for="dia_9" class="dia_data">9</label></td>
+                        <td><label for="dia_10" class="dia_data">10</label></td>
+                        <td><label for="dia_11" class="dia_data">11</label></td>
+                        <td><button class="dia_data" disabled>12</button></td>
+                        <td><label for="dia_13" class="dia_data">13</label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dia_14" class="dia_data">14</label></td>
+                        <td><button class="dia_data" disabled>15</button></td>
+                        <td><label for="dia_16" class="dia_data">16</label></td>
+                        <td><label for="dia_17" class="dia_data">17</label></td>
+                        <td><label for="dia_18" class="dia_data">18</label></td>
+                        <td><label for="dia_19" class="dia_data">19</label></td>
+                        <td><label for="dia_20" class="dia_data">20</label></td>
+                    </tr>
+                    <tr>
+                        <td><button class="dia_data" disabled>21</button></td>
+                        <td><label for="dia_22" class="dia_data">22</label></td>
+                        <td><button class="dia_data" disabled>23</button></td>
+                        <td><label for="dia_24" class="dia_data">24</label></td>
+                        <td><label for="dia_25" class="dia_data">25</label></td>
+                        <td><label for="dia_26" class="dia_data">26</label></td>
+                        <td><label for="dia_27" class="dia_data">27</label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dia_28" class="dia_data">28</label></td>
+                        <td><label for="dia_29" class="dia_data">29</label></td>
+                        <td><label for="dia_30" class="dia_data">30</label></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="coluna_direita">
+            <p class="mensagem_horario">Selecione uma data no calendário para ver a disponibilidade dos profissionais.</p>
+            
+            <input type="radio" name="horario_escolhido" id="hora_1" value="09:00" data-medico="Dr. Guilherme Silva" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_2" value="10:00" data-medico="Dr. Guilherme Silva" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_3" value="14:00" data-medico="Dr. Guilherme Silva" class="gatilho_oculto gatilho_horario">
+            
+            <input type="radio" name="horario_escolhido" id="hora_4" value="07:00" data-medico="Dr. João Pedro" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_5" value="12:00" data-medico="Dr. João Pedro" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_6" value="17:00" data-medico="Dr. João Pedro" class="gatilho_oculto gatilho_horario">
+            
+            <input type="radio" name="horario_escolhido" id="hora_7" value="08:00" data-medico="Dra. Maria Silva" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_8" value="10:00" data-medico="Dra. Maria Silva" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_9" value="13:00" data-medico="Dra. Maria Silva" class="gatilho_oculto gatilho_horario">
+            
+            <input type="radio" name="horario_escolhido" id="hora_10" value="08:00" data-medico="Dra. Joselaine Valaski" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_11" value="16:00" data-medico="Dra. Joselaine Valaski" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_12" value="17:20" data-medico="Dra. Joselaine Valaski" class="gatilho_oculto gatilho_horario">
+            
+            <input type="radio" name="horario_escolhido" id="hora_13" value="09:00" data-medico="Dr. Evandro Zatti" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_14" value="14:00" data-medico="Dr. Evandro Zatti" class="gatilho_oculto gatilho_horario">
+            <input type="radio" name="horario_escolhido" id="hora_15" value="16:00" data-medico="Dr. Evandro Zatti" class="gatilho_oculto gatilho_horario">
+            
+            <div class="horarios-disponiveis">
+                <h4>Profissionais Disponíveis</h4>
+
+                <div class="cartao_medico">
+                    <div class="medico_perfil">
+                        <img class="medico_foto" id="foto_guilherme" src="https://api.dicebear.com/7.x/micah/svg?seed=AnaCosta&backgroundColor=e0f2fe" alt="Foto">
+                        <div class="medico_info">
+                            <h5 class="medico_nome">Dr. Guilherme Silva</h5>
+                            <span class="medico_avaliacao">⭐ 4.8</span>
+                        </div>
+                    </div>
+                    <div class="medico_horas">
+                        <label for="hora_1" class="horario_disponivel">09:00</label>
+                        <label for="hora_2" class="horario_disponivel">10:00</label>
+                        <label for="hora_3" class="horario_disponivel">14:00</label>
+                    </div>
+                </div>
+
+                <div class="cartao_medico">
+                    <div class="medico_perfil">
+                        <img class="medico_foto" id="foto_joao" src="https://api.dicebear.com/7.x/micah/svg?seed=CarlosMendes&backgroundColor=e0f2fe" alt="Foto">
+                        <div class="medico_info">
+                            <h5 class="medico_nome">Dr. João Pedro</h5>
+                            <span class="medico_avaliacao">⭐ 4.5</span>
+                        </div>
+                    </div>
+                    <div class="medico_horas">
+                        <label for="hora_4" class="horario_disponivel">07:00</label>
+                        <label for="hora_5" class="horario_disponivel">12:00</label>
+                        <label for="hora_6" class="horario_disponivel">17:00</label>
+                    </div>
+                </div>
+
+                <div class="cartao_medico">
+                    <div class="medico_perfil">
+                        <img class="medico_foto" id="foto_maria" src="https://api.dicebear.com/7.x/micah/svg?seed=LucasFerreira&backgroundColor=e0f2fe" alt="Foto">
+                        <div class="medico_info">
+                            <h5 class="medico_nome">Dra. Maria Silva</h5>
+                            <span class="medico_avaliacao">⭐ 3.6</span> 
+                        </div>
+                    </div>
+                    <div class="medico_horas">
+                        <label for="hora_7" class="horario_disponivel">08:00</label>
+                        <label for="hora_8" class="horario_disponivel">10:00</label>
+                        <label for="hora_9" class="horario_disponivel">13:00</label>
+                    </div>
+                </div>
+
+                <div class="cartao_medico">
+                    <div class="medico_perfil">
+                        <img class="medico_foto" id="foto_joselaine" src="https://api.dicebear.com/7.x/micah/svg?seed=CamilaRocha&backgroundColor=e0f2fe" alt="Foto">
+                        <div class="medico_info">
+                            <h5 class="medico_nome">Dra. Joselaine Valaski</h5>
+                            <span class="medico_avaliacao">⭐ 4.7</span>
+                        </div>
+                    </div>
+                    <div class="medico_horas">
+                        <label for="hora_10" class="horario_disponivel">08:00</label>
+                        <label for="hora_11" class="horario_disponivel">16:00</label>
+                        <label for="hora_12" class="horario_disponivel">17:20</label>
+                    </div>
+                </div>
+
+                <div class="cartao_medico">
+                    <div class="medico_perfil">
+                        <img class="medico_foto" src="https://api.dicebear.com/7.x/micah/svg?seed=PatriciaLima&backgroundColor=e0f2fe" alt="Foto">
+                        <div class="medico_info">
+                            <h5 class="medico_nome">Dr. Evandro Zatti</h5>
+                            <span class="medico_avaliacao">⭐ 4.5</span>
+                        </div>
+                    </div>
+                    <div class="medico_horas">
+                        <label for="hora_13" class="horario_disponivel">09:00</label>
+                        <label for="hora_14" class="horario_disponivel">14:00</label>
+                        <label for="hora_15" class="horario_disponivel">16:00</label>
+                    </div>
+                </div>
+            </div>
+                <label  id ="btn_ir_para_consultas" for="fechar_modal" class="btn_confirmar">Confirmar Agendamento</label>
+        </div>
+    </div>   
+</div></center>
+
+<script src="Js/modal_agendar.js"></script>

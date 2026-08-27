@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><!--tudo q tem no head é a config da pagina-->
+    <meta name="description" content="Um sistema psicológico voltado à pessoas com vulnerabilidade socioeconômica.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--faz o site funcionar direito no celular-->
+    <title>MindSpace</title><!--nome da aba do site-->
+    <link rel="stylesheet" href="style.css"><!--linka o css no html-->
+</head>
+<body><!--tudo que fica visivel na pag-->
+    <section class="imagem-fundo">
+        <header><!--onde ta os botoes-->
+            <a href="index.html">
+                <img src="../especialidades/imagens/logo.png" class="logo">
+            </a> <!--HREF: p onde a pag vai, nesse caso seria p voltar p pag inicial--><!-- o <a> serve p criar o link-->
+            <nav>
+                <ul class="paginas"> <!-- <ul> = lista não-ordenada (sem numeração)-->
+                    <li><a href="../especialidades/especialidades.html" class="especialidades" target="_self">Especialidades</a></li>
+                    <li><a href="../voluntarios/index.html" class="sejavoluntario" target="_self">Seja voluntário</a></li>
+                    <li><a href="../login/login.html" class="entrar" target="_self">Entrar</a></li>
+                    <li><a href="../login/cadastro.html" class="cadastro" target="_self">Cadastre-se</a></li>
+                </ul> <!-- <li> = cada item da lista -->
+            </nav>
+        </header>
+        <section class="primeira-pag"> <!--*onde ta a imagem de fundo, texto de boas vindas e a cor azul da lateral-->
+            <aside class="lateral">
+                <h1> Bem-vindo(a) <br>
+                    ao MindSpace </h1>
+                <p>Terapia online voluntária</p>
+            </aside>
+        </section>
+    </section>
+        <main>
+
+            <section class="aba-especialidades" id="especialidades">
+                
+                <h2>Especialidades</h2>
+
+                <div class="cards">
+                    <article>
+                        <a href="../login/cadastro.html"class="card">
+                        <img src="imagens/familia.png" alt="Terapia Familiar"><!-- alt="" = texto alternativo para leitores de tela e acessibilidade -->
+                        <p class="card-especialidades">Terapia Familiar</p>
+                        </a>
+                    </article>    
+                    <article>
+                        <a href="../login/cadastro.html" class="card">
+                        <img src="imagens/depressao.png" alt="Depressão e Ansiedade">
+                        <p class="card-depressao">Depressão e Ansiedade</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="../login/cadastro.html" class="card">
+                        <img src="imagens/infantil.png" alt="Terapia Infantil e Adolescente">
+                        <p class="card-infantil">Terapia Infantil e Adolescente</p>
+                        </a>
+                    </article>
+                </div>
+                <a href="../login/cadastro.html" class="horarios" target="_self">Consultar horários disponíveis</a>
+            </section>
+
+            <section class="sejavoluntario2" id="voluntario">
+                <h3>Transforme Vidas. Seja um Voluntário</h3>
+                <p>Junte-se ao MindSpace e faça parte de uma rede de profissionais <br> dedicados a democratizar o acesso à saúde mental.</p>
+            </section>
+
+            <section class="secaovoluntario2">
+                <h4>Por que ser um voluntário?</h4>
+
+                <div class="cards-voluntario">
+
+                    <article class="card-voluntario1">
+                            <div class="card-icone">
+                                <img src="imagens/heart-handshake (1).png" alt="ícone coração">
+                            </div>
+                        <p class="card-titulo">Faça Atendimentos</p>
+                        <p>Realize atendimentos clínicos e faça a diferença na vida de quem mais precisa de apoio psicológico.</p>
+                        <ul>
+                            <li> ✔ Impacto social direto</li>
+                            <li> ✔ Flexibilidade de horários</li>
+                        </ul>
+                    </article>
+
+                    <article class="card-voluntario2">
+                        <div class="card-icone">
+                            <img src="imagens/briefcase.png" alt="ícone maleta">
+                        </div>
+                        <p class="card-titulo">Aumente seu Portfólio</p>
+                        <p>Ganhe experiência prática comprovada e expanda seu currículo com horas de atuação voluntária.</p>
+                        <ul>
+                            <li> ✔ Certificado de horas voluntárias</li>
+                            <li> ✔ Experiência para residência</li>
+                        </ul>
+                    </article>
+
+                    <article class="card-voluntario3">
+                        <div class="card-icone">
+                            <img src="imagens/users-round.png" alt="ícone pessoas">
+                        </div>
+                        <p class="card-titulo">Casos Reais</p>
+                        <p>Participe de casos reais, lidando com uma diversidade de demandas e aprimorando sua escuta clínica.</p>
+                        <ul>
+                            <li> ✔ Supervisão e apoio</li>
+                            <li> ✔ Diversidade clínica</li>
+                        </ul>
+                    </article>
+
+                    <article class="card-voluntario4">
+                        <div class="card-icone">
+                            <img src="imagens/trending-up.png" alt="ícone seta">
+                        </div>
+                        <p class="card-titulo">Profissionalismo</p>
+                        <p>Desenvolva suas habilidades, ganhe confiança e impulsione sua carreira na área da saúde mental.</p>
+                        <ul>
+                            <li> ✔ Networking com outros psicólogos</li>
+                            <li> ✔ Desenvolvimento contínuo</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+                
+
+            <section class="ultima-parte">
+                <article class="texto-ultimo">
+                    <h5>Pronto para dar o próximo passo?</h6>
+                    <p>Seu conhecimento pode ser a luz na jornada de alguém. Cadastre-se agora e <br> comece a atender.</p>
+                    <a href="../login/cadastro.html" class="btn-cadastre-se" target="_self">Cadastre-se como Voluntário</a>
+                </article>
+            </section>
+            
+        </main>
+</body>
+</html>

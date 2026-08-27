@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cancelar.css">
+</head>
+
+<body>
+
+<div class="painel_consultas">
+    
+    <div class="cabecalho_painel">
+        <h2 class="titulo_painel">Minhas Consultas</h2>
+        <div class="abas_navegacao">
+            <span class="aba_ativa">Próximas</span>
+            <span class="aba_inativa">Histórico</span>
+        </div>
+    </div>
+
+    <div class="cartao_consulta_ativa">
+        
+        <div class="consulta_detalhes">
+            <div class="medico_perfil_grande">
+                <img class="medico_foto_grande" src="perfil.png" alt="Dra. Mariana Souza">
+                <div class="medico_info_texto">
+                    <h3 class="medico_nome_destaque">Dra. Mariana Souza</h3>
+                    <span class="medico_especialidade">Transtornos Alimentares</span>
+                </div>
+            </div>
+
+            <div class="consulta_agendamento">
+                <span class="badge_confirmada">Confirmada</span>
+                <div class="consulta_data_hora">
+                    <span>📅 12 de junho</span>
+                    <span>⏰ 16:00</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="linha_divisoria">
+
+        <div class="consulta_acoes">
+            <button class="btn_cancelar" onclick="abrirModal()">Cancelar Consulta</button>
+            <a href="model-calendar.html" class="btn_acao btn_remarcar">Remarcar</a>
+            <button class="btn_acao btn_acessar">🎥 Acessar Consulta</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL (fora do painel, antes do </body>) -->
+<div class="overlay" id="overlay">
+    <div class="modal">
+        <button class="modal_fechar" onclick="fecharModal()">×</button>
+        <p class="modal_titulo">Cancelar Consulta</p>
+        <p class="modal_texto">Deseja realmente cancelar esta consulta?</p>
+        <div class="modal_acoes">
+            <button class="btn_nao" onclick="fecharModal()">Não</button>
+            <button class="btn_sim" onclick="confirmarCancelamento()">Sim</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function abrirModal() {
+        document.getElementById('overlay').classList.add('visivel');
+    }
+
+    function fecharModal() {
+        document.getElementById('overlay').classList.remove('visivel');
+    }
+
+    function confirmarCancelamento() {
+        fecharModal();
+
+        const toast = document.createElement('div');
+        toast.textContent = 'Consulta cancelada com sucesso!';
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            z-index: 999;
+        `;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+
+    document.getElementById('overlay').addEventListener('click', function(e) {
+        if (e.target === this) fecharModal();
+    });
+</script>
+
+</body>
+</html>

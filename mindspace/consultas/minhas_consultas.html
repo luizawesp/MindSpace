@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minhas Consultas</title>
+
+    <link rel="stylesheet" href="css/minhas_consultas.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a href="../landingpage/index.html">
+
+            <img src="../especialidades/imagens/logo.png" class="logo" alt="Logo">
+
+        </a>
+
+        <div class="cantonav">
+
+            <svg viewBox="0 0 100 100" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#007eb4" stroke-width="3"/>
+
+                <circle cx="50" cy="38" r="16" fill="#007eb4"/>
+
+                <path d="M14 82 Q14 58 50 58 Q86 58 86 82" fill="#007eb4" clip-path="url(#c)"/>
+
+                <defs>
+
+                    <clipPath id="c">
+
+                        <circle cx="50" cy="50" r="48"/>
+
+                    </clipPath>
+
+                </defs>
+
+            </svg>
+
+            <p>Olá, usuário</p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="menu-topo">☰</div>
+
+        <nav>
+
+            <a href="../landingpage/index.html">
+
+                <span class="icone">🏠</span>
+
+                <span class="texto-menu">Início</span>
+
+            </a>
+
+            <a href="../consultas/minhas_consultas.html" class="ativo">
+
+                <span class="icone">📅</span>
+
+                <span class="texto-menu">Minhas Consultas</span>
+
+            </a>
+
+            <a href="../especialidades/especialidades.html">
+
+                <span class="icone">🧠</span>
+
+                <span class="texto-menu">Especialidades</span>
+
+            </a>
+
+            <a href="../profissionais/profissionais.html">
+
+                <span class="icone">👨‍⚕️</span>
+
+                <span class="texto-menu">Profissionais</span>
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- CONTEÚDO -->
+
+    <div style="margin-top: 110px; margin-left: 70px;">
+
+        <div class="painel_consultas">
+
+            <div class="cabecalho_painel">
+
+                <h2 class="titulo_painel">Minhas Consultas</h2>
+
+                <div class="abas_navegacao">
+
+                    <span class="aba_ativa">Próximas</span>
+
+                    <span class="aba_inativa">Histórico</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="cartao_consulta_ativa">
+
+                <div class="consulta_detalhes">
+
+<div class="medico_perfil_grande">
+
+    <img
+        src="img/medico_1.svg"
+        alt="Médico"
+        style="width:100px;height:100px;border:3px;">
+
+    <div class="medico_info_texto">
+        <h3 class="medico_nome_destaque">Dra. Mariana Souza</h3>
+        <span class="medico_especialidade">Transtornos Alimentares</span>
+    </div>
+
+</div>
+
+
+
+                    <div class="consulta_agendamento">
+
+                        <span class="badge_confirmada">Confirmada</span>
+
+                        <div class="consulta_data_hora">
+
+                            <span>📅</span><span id="data_consulta_selecionada"> 12 de junho</span>
+
+                            <span>⏰</span><span id="horario_consulta_selecionado"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <hr class="linha_divisoria">
+
+
+
+         <div class="acoes">
+                         <button class="btn_cancelar" onclick="abrirModal()">Cancelar Consulta</button>
+            <a href="../consultas/modal_agendar.html" class="btn_acao btn_remarcar">Remarcar</a>
+            <button class="btn_acao btn_acessar"> Acessar Consulta</button>
+        </div>
+
+<div class="overlay" id="overlay">
+    <div class="modal">
+        <button class="modal_fechar" onclick="fecharModal()">×</button>
+        <p class="modal_titulo">Cancelar Consulta</p>
+        <p class="modal_texto">Deseja realmente cancelar esta consulta?</p>
+        <div class="modal_acoes">
+            <button class="btn_nao" onclick="fecharModal()">Não</button>
+            <button class="btn_sim" onclick="confirmarCancelamento()">Sim</button>
+        </div>
+    </div>
+</div>
+              
+            </div>
+
+        </div>
+
+    </div>
+<script>
+    function abrirModal() {
+        document.getElementById('overlay').classList.add('visivel');
+    }
+
+    function fecharModal() {
+        document.getElementById('overlay').classList.remove('visivel');
+    }
+
+    function confirmarCancelamento() {
+        fecharModal();
+
+        const toast = document.createElement('div');
+        toast.textContent = 'Consulta cancelada com sucesso!';
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            z-index: 999;
+        `;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+
+    document.getElementById('overlay').addEventListener('click', function(e) {
+        if (e.target === this) fecharModal();
+    });
+</script>
+
+</body>
+
+</html>
+
+```

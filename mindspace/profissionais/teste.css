@@ -1,0 +1,84 @@
+body {
+    background-image: url('backgroundimage.png');
+    background-image: linear-gradient(rgba(240, 240, 240, 0.053), rgba(255, 255, 255, 0.371)), url('backgroundImage.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin:0
+    
+}  
+
+header{
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 20px 50px;
+    width: 93.3%;
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1)
+}
+.paginas{
+    list-style-type: none;
+    display: flex;
+    gap: 30px 45px;
+    justify-content: space-between;
+    font-size: 23px;
+}
+.nav{
+    list-style: none;
+;
+}
+
+.logo{
+    width: 300px
+}
+
+.entrar{
+    text-decoration: none;
+    color: white;
+    background-color: #759ed7;
+    border-radius: 35px;
+    padding: 10px 20px;
+
+}
+
+
+
+.especialidades{
+    text-decoration: none; /* tira o sublinhado parecendo link*/
+    color: #62BBC1;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    padding: 10px 20px;
+    transition: border-color 0.4s ease;
+}
+
+.especialidades:hover {
+    background-color: transparent; /* Cor azul clara que preenche o fundo */
+    border-color: #8bcce9;
+}
+
+.v {
+    text-decoration: none;
+    color: #62BBC1;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    padding: 10px 20px;
+    transition: border-color 0.4s ease;
+}
+
+.v:hover {
+    background-color: transparent;
+    border-color: #8bcce9;
+}
+
+
+.cadastro{
+    text-decoration: none;
+    color: white;
+    background-color: cornflowerblue;
+    border-radius: 35px;
+    padding: 10px 20px;
+}

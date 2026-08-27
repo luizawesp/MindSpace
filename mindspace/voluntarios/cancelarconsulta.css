@@ -1,0 +1,218 @@
+.painel {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+} 
+
+.titulo {
+    color: #8B4513; 
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.abas_navegacao {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.aba_ativa {
+    color: #00a896; 
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 3px solid #00a896;
+    padding-bottom: 10px;
+    margin-bottom: -11px; 
+    cursor: pointer;
+}
+
+.aba_inativa {
+    color: #999;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cartao_consulta {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+}
+
+.consulta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.medico {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.medico_foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e0f7fa;
+}
+
+.medico_nome {
+    font-size: 22px;
+    color: #1a202c;
+    margin: 5px 0;
+}
+
+.medico_especialidade {
+    color: #718096;
+    font-size: 16px;
+}
+
+.agendamento {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.confirmada {
+    background-color: #c6f6d5; 
+    color: #00a859; 
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.consulta_data_hora {
+    display: flex;
+    gap: 20px;
+    color: #2d3748;
+    font-size: 16px;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 20px;
+}
+
+.btn_acao {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; 
+    border: none;
+}
+
+.btn_acao:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05); 
+}
+.btn_remarcar {
+    background-color: #f5a623; 
+    color: #ffffff;
+}
+.btn_acessar {
+    background-color: #00ea77; 
+    color: #ffffff;
+}
+.btn_cancelar {
+    background: none;
+    border: none;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 4px;
+}
+
+.btn_cancelar:hover {
+    background-color: #fff5f5;
+    border-radius: 20px;
+}
+
+.overlay {
+    display: none;             
+    position: fixed;          
+    inset: 0;                
+    background: rgba(0,0,0,0.4); 
+    z-index: 100;             
+    align-items: center;       
+    justify-content: center;  
+}
+
+
+.overlay.visivel {
+    display: flex; 
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 340px;
+    position: relative; 
+}
+
+
+.modal_fechar {
+    position: absolute; 
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal_titulo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal_texto {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.modal_acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.btn_nao {
+    flex: 1;              
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn_sim {
+    flex: 1;              
+    background: #dc2626;
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}

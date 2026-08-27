@@ -1,0 +1,230 @@
+.painel_consultas {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.painel_consultas .titulo_painel {
+    color: #8B4513; 
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.painel_consultas .abas_navegacao {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.painel_consultas .aba_ativa {
+    color: #00a896; 
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 3px solid #00a896;
+    padding-bottom: 10px;
+    margin-bottom: -11px; 
+    cursor: pointer;
+}
+
+.painel_consultas .aba_inativa {
+    color: #999;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.painel_consultas .cartao_consulta_ativa {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+}
+
+.painel_consultas .consulta_detalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.painel_consultas .medico_perfil_grande {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.painel_consultas .medico_foto_grande {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e0f7fa;
+}
+
+.painel_consultas .medico_nome_destaque {
+    font-size: 22px;
+    color: #1a202c;
+    margin: 0 0 5px 0;
+}
+
+.painel_consultas .medico_especialidade {
+    color: #718096;
+    font-size: 16px;
+}
+
+.painel_consultas .consulta_agendamento {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.painel_consultas .badge_confirmada {
+    background-color: #c6f6d5; 
+    color: #00a859; 
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.painel_consultas .consulta_data_hora {
+    display: flex;
+    gap: 20px;
+    color: #2d3748;
+    font-size: 16px;
+}
+
+.painel_consultas .linha_divisoria {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    margin: 30px 0;
+}
+
+.painel_consultas .consulta_acoes {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 20px;
+}
+
+.painel_consultas .btn_acao {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; 
+    border: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+
+}
+
+.painel_consultas .btn_acao:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05); 
+}
+
+
+.painel_consultas .btn_remarcar {
+    background-color: #f5a623; 
+    color: #ffffff;
+}
+
+.painel_consultas .btn_acessar {
+    background-color: #00ea77; 
+    color: #ffffff;
+}
+.painel_consultas .btn_cancelar {
+    background: none;
+    border: none;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 4px;
+}
+
+.painel_consultas .btn_cancelar:hover {
+    background-color: #fff5f5;
+    border-radius: 20px;
+}
+/* Fundo escuro que cobre a página inteira */
+.overlay {
+    display: none;             /* Começa invisível */
+    position: fixed;           /* Fica fixo mesmo se rolar a página */
+    inset: 0;                  /* Cobre tudo: top, right, bottom, left = 0 */
+    background: rgba(0,0,0,0.4); /* Preto com 40% de opacidade */
+    z-index: 100;              /* Fica na frente de todos os outros elementos */
+    align-items: center;       /* Centraliza o modal verticalmente */
+    justify-content: center;   /* Centraliza o modal horizontalmente */
+}
+
+/* Quando o JS adiciona a classe "visivel", o modal aparece */
+.overlay.visivel {
+    display: flex; /* Troca de none para flex → modal aparece centralizado */
+}
+
+/* A caixinha branca */
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 340px;
+    position: relative; /* Necessário para o botão × se posicionar no canto */
+}
+
+/* Botão × no canto superior direito */
+.modal_fechar {
+    position: absolute; /* Posicionado em relação ao .modal */
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal_titulo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.4rem;
+}
+
+.modal_texto {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 1.25rem;
+}
+
+/* Botões "Não" e "Sim" lado a lado */
+.modal_acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.btn_nao {
+    flex: 1;              /* Ocupa metade do espaço */
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn_sim {
+    flex: 1;              /* Ocupa a outra metade */
+    background: #dc2626;  /* Vermelho */
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}

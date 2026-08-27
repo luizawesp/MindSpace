@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MindSpace - Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    min-height:100vh;
+
+    background-image:url("../landingpage/imagens/Design%20sem%20nome%20(1).png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.3);
+    z-index:1;
+}
+
+.area-login{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.cartao-acesso{
+    width:500px;
+    max-width:100%;
+
+    background:#fff;
+    border-radius:28px;
+
+    padding:25px 35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.cabecalho-acesso{
+    margin-bottom:20px;
+}
+
+.titulo-acesso{
+    text-align:center;
+    font-size:2.8rem;
+    font-weight:500;
+    color:#8B5A2B;
+}
+
+.seletor-perfil{
+    width:100%;
+
+    display:flex;
+
+    padding:6px;
+    margin-bottom:25px;
+
+    background:#EFEFEF;
+
+    border-radius:50px;
+}
+
+.seletor-perfil button{
+    flex:1;
+
+    border:none;
+    background:transparent;
+
+    padding:14px;
+
+    font-size:1.1rem;
+    font-weight:600;
+
+    color:#50637C;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.seletor-perfil button.ativo{
+    background:#7CC0EC;
+    color:#fff;
+}
+
+.formulario-acesso{
+    width:100%;
+}
+
+.campo-formulario{
+    margin-bottom:18px;
+}
+
+.campo-formulario label{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:1.1rem;
+    font-weight:500;
+
+    color:#243547;
+}
+
+.campo-formulario input{
+    width:100%;
+    height:55px;
+
+    padding:0 18px;
+
+    border:1.5px solid #DAB89E;
+    border-radius:14px;
+
+    font-size:1rem;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.campo-formulario input:focus{
+    border-color:#7CC0EC;
+    box-shadow:0 0 0 3px rgba(124,192,236,.2);
+}
+
+.campo-formulario input::placeholder{
+    color:#A5A5A5;
+}
+
+.area-recuperacao-senha{
+    display:flex;
+    justify-content:flex-end;
+
+    margin-bottom:20px;
+}
+
+.area-recuperacao-senha a{
+    text-decoration:none;
+    font-weight:500;
+    color:#7CC0EC;
+}
+
+.area-recuperacao-senha a:hover{
+    text-decoration:underline;
+}
+
+.botao-entrar{
+    width:100%;
+    height:60px;
+
+    border:none;
+    border-radius:50px;
+
+    background:#7CC0EC;
+
+    font-size:1.7rem;
+    font-weight:700;
+
+    color:#3D3D3D;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.botao-entrar:hover{
+    transform:translateY(-2px);
+}
+
+.rodape-acesso{
+    text-align:center;
+
+    margin-top:20px;
+
+    font-size:1rem;
+    color:#34495E;
+}
+
+.rodape-acesso a{
+    text-decoration:none;
+    font-weight:600;
+    color:#7CC0EC;
+}
+
+@media (max-width:768px){
+
+    .cartao-acesso{
+        width:100%;
+        padding:20px;
+    }
+
+    .titulo-acesso{
+        font-size:2rem;
+    }
+
+    .seletor-perfil button{
+        font-size:.95rem;
+    }
+
+    .botao-entrar{
+        font-size:1.4rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="area-login">
+
+    <section class="cartao-acesso">
+
+        <header class="cabecalho-acesso">
+            <h1 class="titulo-acesso">
+                Bem-vindo de Volta
+            </h1>
+        </header>
+
+        <nav class="seletor-perfil">
+
+            <button
+                type="button"
+                id="botaoPaciente"
+                class="ativo">
+                Sou Paciente
+            </button>
+
+            <button
+                type="button"
+                id="botaoVoluntario">
+                Sou Voluntário
+            </button>
+
+        </nav>
+
+        <form
+            class="formulario-acesso"
+            id="formLogin">
+
+            <section class="campo-formulario">
+
+                <label
+                    for="campoAcesso"
+                    id="rotuloAcesso">
+
+                    E-mail ou CPF:
+
+                </label>
+
+                <input
+                    id="campoAcesso"
+                    type="text"
+                    placeholder="Digite seu e-mail ou CPF"
+                    required>
+
+            </section>
+
+            <section class="campo-formulario">
+
+                <label for="campoSenha">
+                    Senha:
+                </label>
+
+                <input
+                    id="campoSenha"
+                    type="password"
+                    placeholder="Sua senha secreta"
+                    required>
+
+            </section>
+
+            <p class="area-recuperacao-senha">
+                <a href="#">
+                    Esqueceu a senha?
+                </a>
+            </p>
+
+            <button
+                type="submit"
+                class="botao-entrar">
+
+                Entrar
+
+            </button>
+
+        </form>
+
+        <footer class="rodape-acesso">
+
+            Ainda não tem conta?
+
+            <a href="cadastro.html">
+                Cadastre-se aqui
+            </a>
+
+        </footer>
+
+    </section>
+
+</main>
+
+<script>
+
+const botaoPaciente =
+document.getElementById("botaoPaciente");
+
+const botaoVoluntario =
+document.getElementById("botaoVoluntario");
+
+const rotuloAcesso =
+document.getElementById("rotuloAcesso");
+
+const campoAcesso =
+document.getElementById("campoAcesso");
+
+botaoPaciente.addEventListener("click", () => {
+
+    botaoPaciente.classList.add("ativo");
+    botaoVoluntario.classList.remove("ativo");
+
+    rotuloAcesso.textContent =
+    "E-mail ou CPF:";
+
+    campoAcesso.placeholder =
+    "Digite seu e-mail ou CPF";
+
+});
+
+botaoVoluntario.addEventListener("click", () => {
+
+    botaoVoluntario.classList.add("ativo");
+    botaoPaciente.classList.remove("ativo");
+
+    rotuloAcesso.textContent =
+    "E-mail ou CRP:";
+
+    campoAcesso.placeholder =
+    "Digite seu e-mail ou CRP";
+
+});
+
+document
+.getElementById("formLogin")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    window.location.href =
+    "../especialidades/especialidades.html";
+
+});
+
+</script>
+
+</body>
+</html>

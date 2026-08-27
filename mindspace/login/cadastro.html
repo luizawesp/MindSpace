@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MindSpace - Cadastro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    min-height:100vh;
+    padding:40px 20px;
+
+    background-image:url("../landingpage/imagens/Design%20sem%20nome%20(1).png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(255,255,255,.3);
+    z-index:1;
+}
+
+.area-cadastro{
+    position:relative;
+    z-index:2;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.cartao-cadastro{
+    width:500px;
+    max-width:100%;
+    background:#fff;
+    border-radius:28px;
+    padding:25px 35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.titulo-cadastro{
+    text-align:center;
+    font-size:2.4rem;
+    color:#8B5A2B;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.seletor-perfil{
+    width:100%;
+    background:#EFEFEF;
+    border-radius:50px;
+    display:flex;
+    padding:6px;
+    margin-bottom:25px;
+}
+
+.seletor-perfil button{
+    flex:1;
+    border:none;
+    background:transparent;
+    padding:14px;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    color:#50637C;
+    transition:.3s;
+}
+
+.seletor-perfil button.ativo{
+    background:#7CC0EC;
+    color:#fff;
+}
+
+.formulario-cadastro fieldset{
+    border:none;
+}
+
+.grupo-campo{
+    margin-bottom:18px;
+}
+
+.grupo-campo label{
+    display:block;
+    margin-bottom:8px;
+    font-size:1.1rem;
+    font-weight:500;
+    color:#243547;
+}
+
+.grupo-campo input{
+    width:100%;
+    height:55px;
+    border:1.5px solid #DAB89E;
+    border-radius:14px;
+    padding:0 18px;
+    font-size:1rem;
+    outline:none;
+    transition:.3s;
+}
+
+.grupo-campo input:focus{
+    border-color:#7CC0EC;
+    box-shadow:0 0 0 3px rgba(124,192,236,.2);
+}
+
+.botao-cadastrar{
+    width:100%;
+    height:60px;
+    border:none;
+    border-radius:50px;
+    background:#7CC0EC;
+    color:#3D3D3D;
+    font-size:1.6rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:10px;
+}
+
+.botao-cadastrar:hover{
+    transform:translateY(-2px);
+}
+
+.rodape-cadastro{
+    text-align:center;
+    margin-top:20px;
+    color:#34495E;
+}
+
+.rodape-cadastro a{
+    text-decoration:none;
+    color:#7CC0EC;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+    .cartao-cadastro{
+        width:100%;
+        padding:20px;
+    }
+
+    .titulo-cadastro{
+        font-size:2rem;
+    }
+
+    .botao-cadastrar{
+        font-size:1.3rem;
+        height:55px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="area-cadastro">
+
+<section class="cartao-cadastro">
+
+<header>
+    <h1 class="titulo-cadastro">
+        Criar Conta
+    </h1>
+</header>
+
+<nav class="seletor-perfil">
+
+    <button
+        type="button"
+        id="botaoPaciente"
+        class="ativo">
+
+        Sou Paciente
+
+    </button>
+
+    <button
+        type="button"
+        id="botaoVoluntario">
+
+        Sou Voluntário
+
+    </button>
+
+</nav>
+
+<form
+    class="formulario-cadastro"
+    id="formCadastro">
+
+<fieldset>
+
+<div class="grupo-campo">
+    <label for="nomeCompleto">Nome Completo:</label>
+    <input
+        id="nomeCompleto"
+        type="text"
+        placeholder="Digite seu nome completo"
+        required>
+</div>
+
+<div class="grupo-campo">
+    <label for="cpf">CPF:</label>
+    <input
+        id="cpf"
+        type="text"
+        placeholder="000.000.000-00"
+        required>
+</div>
+
+<div
+    id="campoNascimento"
+    class="grupo-campo">
+
+    <label for="dataNascimento">
+        Data de Nascimento:
+    </label>
+
+    <input
+        id="dataNascimento"
+        type="date"
+        required>
+
+</div>
+
+<div
+    id="campoRegistroProfissional"
+    class="grupo-campo"
+    style="display:none;">
+
+    <label for="crp">CRP:</label>
+
+    <input
+        id="crp"
+        type="text"
+        placeholder="Digite seu CRP">
+
+</div>
+
+<div class="grupo-campo">
+    <label for="email">E-mail:</label>
+    <input
+        id="email"
+        type="email"
+        placeholder="Digite seu e-mail"
+        required>
+</div>
+
+<div class="grupo-campo">
+    <label for="senha">Senha:</label>
+    <input
+        id="senha"
+        type="password"
+        placeholder="Crie uma senha"
+        required>
+</div>
+
+<div class="grupo-campo">
+    <label for="confirmacaoSenha">
+        Confirmar Senha:
+    </label>
+
+    <input
+        id="confirmacaoSenha"
+        type="password"
+        placeholder="Repita sua senha"
+        required>
+</div>
+
+<button
+    type="submit"
+    class="botao-cadastrar">
+
+    Cadastre-se
+
+</button>
+
+</fieldset>
+
+</form>
+
+<footer class="rodape-cadastro">
+
+    Já tem conta?
+
+    <a href="login.html">
+        Entre aqui
+    </a>
+
+</footer>
+
+</section>
+
+</main>
+
+<script>
+
+const botaoPaciente =
+document.getElementById("botaoPaciente");
+
+const botaoVoluntario =
+document.getElementById("botaoVoluntario");
+
+const campoNascimento =
+document.getElementById("campoNascimento");
+
+const campoRegistroProfissional =
+document.getElementById("campoRegistroProfissional");
+
+botaoPaciente.addEventListener("click", () => {
+
+    botaoPaciente.classList.add("ativo");
+    botaoVoluntario.classList.remove("ativo");
+
+    campoNascimento.style.display = "block";
+    campoRegistroProfissional.style.display = "none";
+
+});
+
+botaoVoluntario.addEventListener("click", () => {
+
+    botaoVoluntario.classList.add("ativo");
+    botaoPaciente.classList.remove("ativo");
+
+    campoNascimento.style.display = "none";
+    campoRegistroProfissional.style.display = "block";
+
+});
+
+document
+.getElementById("formCadastro")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const senha =
+    document.getElementById("senha").value;
+
+    const confirmarSenha =
+    document.getElementById("confirmacaoSenha").value;
+
+    if(senha !== confirmarSenha){
+
+        alert("As senhas não coincidem!");
+        return;
+
+    }
+
+    alert("Cadastro realizado com sucesso!");
+
+    window.location.href = "login.html";
+
+});
+
+</script>
+
+</body>
+</html>

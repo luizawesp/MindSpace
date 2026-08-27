@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil profissional</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="profissionais.html">Voltar para profissionais</a>
+        <h1 class="titulo">Perfil Profissional</h1>
+    </header>
+    <main class="tudo">
+        <section class="esquerda">
+            <article class="perfilprofissional">
+                    <img src="ana.svg" class="foto">
+                <div>
+                    <h1>Dra. Ana Costa</h1>
+                    <p class="textoperfil">Terapia Infantil e Adolescente, Terapia Familiar</p>
+                    <p>CRP: 06/1111 ⭐⭐⭐⭐⭐ 4.9</p>
+                </div>
+            </article>
+            <section class="informacoes">
+                <div class="aba">
+                        <h1 class="topicos" onclick="trocarAba('abordagem', event)">Abordagem</h1>
+                        <h1 class="topicos" onclick="trocarAba('experiencias', event)">Experiências</h1>
+                        <h1 class="topicos" onclick="trocarAba('servicos', event)">Serviços</h1>
+                </div>
+                <section id="abordagem" class="conteudo">
+                    <div class="sobre">
+                        <h1>Sobre mim</h1>
+                        <p>Especialista em desenvolvimento infantil e dinâmicas familiares. <br> Acredito no poder do lúdico para acessar as emoções das crianças e adolescentes.</p>
+                        <h1>Tratamentos</h1>
+                        <div>
+                        <button class="botaogrande">Terapia Infantil e adolescente</button>
+                        <button>Terapia Familiar</button>
+                    </div>
+                </section>
+                <section id="experiencias" class="conteudo">
+                    <ul class="cardexperiencia">
+                        <h1>Trajetória </h1>
+                        <li>Atuação em clínicas particulares com foco em saúde mental.</li>
+                        <li>Participação em projetos sociais de apoio psicológico gratuito.</li>
+                        <li>Especialização contínua em abordagens baseadas em evidências.</li>
+                        <li>Experiência com atendimentos online e presenciais.</li>
+                    </ul>
+                </section>
+             <section id="servicos" class="conteudo">
+                <div class="cardservicos">
+                    <h1>Serviços oferecidos</h1>
+                    <article class="textoservicos">
+                        <h2>Psicoterapia Individual</h2>
+                       <p>Sessões de 50 minutos focadas no desenvolvimento pessoal e tratamento de  transtornos.</P>
+                    </article>
+                    <article class="textoservicos">
+                        <h2>Orientação Psicológica Online</h2>
+                        <p>Atendimento remoto seguro e confidencial para pacientes de qualquer lugar.</p>
+                    </article>
+                </div>
+            </section>
+            </section>
+        </section>
+            <aside class="agendar"> 
+                <div class="calendarioborda">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6cb4d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                </div>
+                    <h1>Agende sua sessão</h1>
+                <p>Escolha os melhores dados e <br> horários para você e comece <br> sua jornada de <br>autoconhecimento.</p>
+                <a href="minhaagenda.html"><button class="botaoagendar">Agendar consulta</button></a>
+            </aside>
+    </main>
+    <script src="perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+html, body{
+    overflow-x: hidden; /* Impede a barra de rolagem horizontal de aparecer
+     (acontece quando algo ultrapassa a largura da tela) */
+}
+
+
+.imagem-fundo{
+    height: 100vh;
+    background-image: url('imagens/backgroundimg.jpg');
+    background-size: cover;  /* cobre tudo sem distorcer */
+    background-repeat: no-repeat;
+    background-position: right top; /* mantém o rosto do moço do fundo visível */
+    position: relative; /*para o ::before funcionar*/
+}
+
+.imagem-fundo::before{
+    content: ""; /* utilizada p ativar o pseudo-elemento, como o ::before*/
+    position: absolute;
+    inset: 0; /* cobre toda a área do elemento */
+    background-color: rgba(255, 255, 255, 0.5); /*Último número (0.5) = Transparência*/
+    /* rgba = Red, Green, Blue, Alpha
+       Primeiro número (255) = Vermelho
+       Segundo número (255) = Verde
+       Terceiro número (255) = Azul
+       Como os três estão em 255, a cor é branca.
+
+       0 = totalmente transparente
+       0.5 = 50% transparente
+       1 = totalmente visível
+    */
+
+}
+
+.imagem-fundo >* {
+    position:relative;
+    z-index:1;
+}
+
+
+header{
+    text-decoration: none;
+    justify-content: space-between; /* Empurra logo para a esquerda e nav para a direita */
+    align-items: center; /*alinha só vertical (cima/baico) pra ficar na mesma altura*/
+    display: flex; /*Coloca os elementos filhos (logo e nav) lado a lado */
+    padding: 50px 2%; /* O SEGUNDO É LATERAL O PRIMEIRO É ALTURA*/
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 76px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1) /* Sombra suave embaixo do header: sem sombra lateral,
+     4px para baixo, 10px de espalhamento, 10% de opacidade */
+}
+
+.paginas{
+    list-style-type: none; /*remove as bolinhas ou numeração da lista*/
+    display: flex;
+    gap: 30px 25px; /*primeiro vertical, segundo horizontal*/
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.nav{
+    list-style: none; 
+
+}
+
+.logo{
+    width: 270px;
+}
+
+/* Botões do menu: Especialidades e Seja Voluntário */
+
+.especialidades{
+    text-decoration: none; /* tira o sublinhado parecendo link*/
+    color: #62BBC1;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    padding: 14px 20px; /*altura, lateral*/
+    transition: border-color 0.4s ease;
+}
+
+.especialidades:hover {
+    background-color: transparent; /* Cor azul clara que preenche o fundo */
+    border-color: #8bcce9;
+}
+
+.sejavoluntario{
+    text-decoration: none; /* tira o sublinhado parecendo link*/
+    color: #62BBC1;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    padding: 14px 20px;
+    transition: border-color 0.4s ease;
+}
+
+.sejavoluntario:hover {
+    background-color: transparent;
+    border-color: #8bcce9;
+}
+
+.entrar{
+    text-decoration: none;
+    color: white;
+    background-color: #6CB4D4;
+    border-radius: 35px;
+    padding: 14px 20px;
+}
+
+.cadastro{
+    text-decoration: none;
+    color: white;
+    background-color: #6CB4D4;
+    border-radius: 35px;
+    padding: 14px 20px;
+}
+
+/* ===== BLOCO LATERAL DE BOAS-VINDAS ===== */
+
+.lateral{
+    background-color: #B4D3E3;
+    width: 50%;
+    padding: 8.7% 2%;
+    border-radius: 0 400px 400px 0; /*border-radius: topo-esquerdo topo-direito baixo-direito baixo-esquerdo */
+    opacity: 80%;
+    height: 59%;
+    display: flex;
+    flex-direction: column; /* Empilha h1 e p verticalmente */
+    justify-content: center;   
+}
+
+
+
+h1{
+    font-size: clamp(2rem, 6vw, 90px); 
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:40px;
+}
+
+.primeira-pag{
+    overflow: hidden;
+    height: calc(100vh - 76px); /* 76px = altura do header */
+    display: flex;
+    align-items: flex-start; /* Alinha o bloco lateral ao topo da seção */
+}
+
+.lateral p{
+    margin:0;
+    font-size:2rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color:#cddcf6;
+    padding: 14px 20px;
+    border-radius:30px;
+    width: fit-content;   
+}
+
+
+/*ABA DE ESPECIALIDADES*/
+
+
+.aba-especialidades{
+    background-image: url('imagens/Design sem nome (1).png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:relative;
+    
+}
+
+
+.aba-especialidades::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 0;
+}
+
+
+.aba-especialidades >* {
+    position:relative;
+    z-index:1;
+}
+
+
+h2{
+    text-align: center;
+    margin-bottom: 5%;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    color: #6CB4D4;
+    font-size: 3rem;
+    
+}
+
+.aba-especialidades{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+}
+
+
+
+.cards{
+    display: flex;
+    text-align: center;
+    justify-content: center; /* centraliza na horizontal */
+    align-items: stretch; /* centraliza na vertical */
+    gap: 50px; /* espaço entre os cards */
+    
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+
+.card-especialidades{
+    color:#2E2F2F;
+    font-weight: bold;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    background-color: #B4D3E3;
+    border-radius: 50px;
+    padding: 15px 30px; /* O SEGUNDO É LATERAL O PRIMEIRO É ALTURA*/
+}
+.card-depressao{
+    color:#2E2F2F;
+    font-weight: bold;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    background-color: #B4D3E3;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.card-infantil{
+    color:#2E2F2F;
+    font-weight: bold;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    background-color: #B4D3E3;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.horarios{ /*consultar horarios disponiveis*/
+    font-family:Poppins, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: white;
+    color: #2E2F2F;
+    border-radius: 60px;
+    padding: 10px 20px;
+    text-decoration: none; /* remove a linha de link*/
+    width: fit-content;
+    margin: 50px auto 0;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    
+    
+    
+}
+
+/*aqui começa a aba de voluntarios*/
+
+.sejavoluntario2{
+    background-color: #e3f0ff;
+    height: 300px; /*tamanho do backgroundcolor*/
+     /*para dar espaçamento entre as sections*/
+    text-align: center;
+    padding-top: 80px ;
+    padding-bottom: 2px
+    
+}
+
+h3{
+    margin: auto;
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #7C5030;
+}
+
+
+.sejavoluntario2 p{
+    font-size: 1.5rem;
+    font-family: Poppins , Arial, Helvetica, sans-serif;
+    margin-top: 2.5rem;
+    color:#535353;
+
+}
+
+.secaovoluntario2{
+    background-color: #f7fcff;
+    padding-bottom: 40px; /*tamanho do backgroundcolor*/
+     /*para dar espaçamento entre as sections*/
+    text-align: center;
+   
+    
+}
+
+/*pq ser um voluntario*/
+
+h4{
+    margin:0;
+    padding-top: 40px;
+    text-align:center;
+    font-size:2rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    
+}
+
+
+.card-icone {
+    background-color: #dbeeff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+
+}
+
+.card-icone img {
+    width: 28px;
+    height: 28px;
+    filter: invert(60%) sepia(80%) saturate(400%) hue-rotate(170deg);
+}
+
+.card-titulo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a1a2e;
+    
+}
+
+.card-voluntario1 ul,
+.card-voluntario2 ul,
+.card-voluntario3 ul,
+.card-voluntario4 ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.cards-voluntario {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 40px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color: #f7fcff;
+    
+}
+
+.card-voluntario1,
+.card-voluntario2,
+.card-voluntario3,
+.card-voluntario4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 22%;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 25px;
+    color: black;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+}
+
+
+.ultima-parte{
+    flex-direction: column; /* coloca um abaixo do outro */
+    text-align: center; 
+    display:block;
+    margin-top:30px;
+    margin-bottom: 90px;
+
+    
+    
+    
+}
+
+h5{
+    font-size:2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #7C5030;
+    margin-bottom: 1.7rem;
+    
+}
+
+.texto-ultimo p{
+    margin-bottom: 4rem;
+    font-size:1.3rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    color:#535353
+    
+    
+
+}
+
+.texto-ultimo a{
+    text-decoration: none;
+    background-color: #6CB4D4;
+    border-radius: 35px;
+    color:white;
+    padding: 14px 20px;
+    font-size:1.5rem;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+    }
+
+.texto-ultimo a:hover{
+    transform: scale(1.05);
+    cursor:pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+    
+}
+  

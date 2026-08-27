@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Agenda</title>
+
+    <link rel="stylesheet" href="../nav/nav.css">
+    <link rel="stylesheet" href="agenda.css">
+</head>
+
+<body>
+
+   <!-- HEADER -->
+
+<header>
+    <a href="../landingpage/index.html">
+        <img src="../especialidades/imagens/logo.png" class="logo" alt="Logo">
+    </a>
+
+    <div class="cantonav">
+    <svg viewBox="0 0 100 100" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#007eb4" stroke-width="3"/>
+        <circle cx="50" cy="38" r="16" fill="#007eb4"/>
+        <path d="M14 82 Q14 58 50 58 Q86 58 86 82" fill="#007eb4" clip-path="url(#c)"/>
+        <defs>
+            <clipPath id="c">
+                <circle cx="50" cy="50" r="48"/>
+            </clipPath>
+        </defs>
+    </svg>
+
+    <p>Olá, usuário</p>
+</div>
+</header>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="menu-topo">
+        ☰
+    </div>
+
+    <nav>
+
+        <a href="../landingpage/index.html">
+            <span class="icone">🏠</span>
+            <span class="texto-menu">Início</span>
+        </a>
+
+        <a href="../consultas/minhas_consultas.html">
+            <span class="icone">📅</span>
+            <span class="texto-menu">Minhas Consultas</span>
+        </a>
+
+        <a href="../especialidades/especialidades.html">
+            <span class="icone">🧠</span>
+            <span class="texto-menu">Especialidades</span>
+        </a>
+
+        <a href="../profissionais/profissionais.html" class="ativo">
+            <span class="icone">👨‍⚕️</span>
+            <span class="texto-menu">Profissionais</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+    <!-- CONTEÚDO DA PÁGINA -->
+
+    <main class="tudo">
+
+        <section class="direita">
+
+            <h1>Minha Agenda</h1>
+
+            <article class="segunda">
+
+                <div class="dia">
+                    <p>HOJE <br>14:00</p>
+                </div>
+
+                <div class="meio">
+                    <h2>Maria Alice</h2>
+                    <p>Primeira sessão • Ansiedade</p>
+                </div>
+
+                <div>
+                    <button class="iniciar">Iniciar sala</button>
+                </div>
+
+            </article>
+
+            <article class="segunda">
+
+                <div class="dia2">
+                    <p>AMANHÃ<br>09:30</p>
+                </div>
+
+                <div class="meio">
+                    <h2>João Silva</h2>
+                    <p>Acompanhamento • TCC</p>
+                </div>
+
+                <div>
+                    <button>Ver detalhes</button>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="esquerda">
+
+            <article class="disponibilidade">
+
+                <div class="headerdisponibilidade">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 141, 11)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+
+                    <h2>Disponibilidade</h2>
+
+                </div>
+
+                <p>
+                    Defina seus horários livres para receber novos pacientes
+                </p>
+
+                <button>Gerenciar horários</button>
+
+            </article>
+
+            <article class="progresso">
+
+                <div class="headerprogresso">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6cb4d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <line x1="10" y1="9" x2="8" y2="9"/>
+                    </svg>
+
+                    <h1>Certificado</h1>
+
+                </div>
+
+                <div class="container">
+
+                    <h2>Progresso</h2>
+
+                    <p class="textoprogresso">
+                        18/24 atendimentos
+                    </p>
+
+                </div>
+
+                <div class="barra-fundo">
+                    <div class="barra-progresso"></div>
+                </div>
+
+                <p>
+                    Faltam 6 atendimentos para liberar o certificado
+                </p>
+
+                <button>Solicitar emissão</button>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

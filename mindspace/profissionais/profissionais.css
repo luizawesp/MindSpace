@@ -1,0 +1,145 @@
+body{
+    background-color: #e3f0ff
+
+}
+
+.mae {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 65px;
+    margin: 20px;
+    width: auto; /* era 1152px fixo */
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0; /* era 65px */
+}
+
+.texto{
+    padding: -20px;
+}
+.meio {
+    display: grid;
+}
+.psicologos {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+
+}
+.psicologos2 {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.psicologos3 {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.primeiro {
+    background-color: white;
+    border-radius: 20px;
+    width: 270px;
+    height: 314px;
+}
+.segundo {
+    background-color: white;
+    border-radius: 20px;
+    width: 270px;
+    height: 314px;
+}
+.terceiro {
+    background-color: white;
+    border-radius: 20px;
+    width: 270px;
+    height: 314px;
+}
+.quarto {
+    background-color: white;
+    border-radius: 20px;
+    width: 270px;
+    height: 314px;
+}
+.img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 15px;
+}
+.doutor {
+    font-size: 20px;
+}
+button {
+  width: 190px;
+  height: 40px;
+  border: 2px solid #6cb4d4;
+  border-radius: 25px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 20px;
+  color: #6cb4d4;
+  font-weight: 700;
+}
+p {
+    color: rgb(85, 85, 85);
+}
+
+.principal {
+    color: rgb(151, 81, 0);
+
+    
+
+}
+a {
+    text-decoration: none;
+}
+.pesquisa {
+  border-radius: 25px;
+  border-color: white;
+  background-color: white;
+  width: 180px;
+  height: 35px;
+  gap: 20px;
+  padding-left: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; /* o ícone aparece só uma vez, sem repetir */
+  background-position: 12px center;
+  background-size: 16px; /* Tamanho do ícone*/
+  border: none; /* remove a borda padrão do navegador */
+
+
+    
+
+}
+
+.pesquisa:hover {
+      border: 2px solid #315cfd;
+}
+.iconefiltro {
+      width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='4' y1='6' x2='20' y2='6'/%3E%3Cline x1='8' y1='12' x2='16' y2='12'/%3E%3Cline x1='11' y1='18' x2='13' y2='18'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  cursor: pointer;
+  padding-bottom: 13px;
+}
+
